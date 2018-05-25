@@ -1,0 +1,47 @@
+{
+  "name": "static-html-template",
+  "version": "1.0.0",
+  "description": "静态页面网站快速开发模板，支持自动刷新页面，less样式预处理。",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp webserver",
+    "watch": "gulp watch",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingKui/static-html-template.git"
+  },
+  "keywords": [
+    "less",
+    "sass",
+    "html-template"
+  ],
+  "author": "康兵奎",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BingKui/static-html-template/issues"
+  },
+  "homepage": "https://github.com/BingKui/static-html-template#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-bom": "^2.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-less": "^3.5.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-collector": "^1.3.1",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-static-hash": "^0.1.4",
+    "gulp-tar": "^2.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

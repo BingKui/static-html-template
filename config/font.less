@@ -1,0 +1,37 @@
+// 字体定义
+@font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+
+// 字号
+@font-size-sm:   12px;
+@font-size:      14px;
+@font-size-md:   16px;
+@font-size-lg:   18px;
+
+// 字体粗细
+@font-weight:       400;
+@font-weight-bold:  "bold";
+
+// 字体相应的方法
+.font-size(@size) {
+    font-size: @size;
+    line-height: @size + 8px;
+}
+.font-size-sm() {
+    font-size: @font-size-sm;
+    line-height: @font-size-sm + 8px;
+}
+.font-size() {
+    font-size: @font-size;
+    line-height: @font-size + 8px;
+}
+.font-size-md() {
+    font-size: @font-size-md;
+    line-height: @font-size-md + 8px;
+}
+.font-size-lg() {
+    font-size: @font-size-lg;
+    line-height: @font-size-lg + 8px;
+}
+.font-weight(@weight) {
+    font-weight: @weight;
+}

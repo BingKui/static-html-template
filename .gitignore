@@ -1,0 +1,19 @@
+## 剔除 node 模块安装目录
+**/node_modules
+
+## 剔除 vscode 目录
+**/.vscode
+
+## 剔除 打包后的目录
+**/build
+
+# 剔除 Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history

@@ -1,0 +1,84 @@
+// 样式方法定义文件
+//方法
+.t-l() {
+    text-align: left;
+}
+.t-r() {
+    text-align: right;
+}
+.t-c() {
+    text-align: center;
+}
+.m(@num) {
+    margin: @num * 1px;
+}
+.m-t(@num) {
+    margin-top: @num * 1px;
+}
+.m-b(@num) {
+    margin-bottom: @num * 1px;
+}
+.m-r(@num) {
+    margin-right: @num * 1px;
+}
+.m-l(@num) {
+    margin-left: @num * 1px;
+}
+.m-v(@num) {
+    margin: @num * 1px 0;
+}
+.m-h(@num) {
+    margin: 0 @num * 1px;
+}
+.p(@num) {
+    padding: @num * 1px;
+}
+.p-t(@num) {
+    padding-top: @num * 1px;
+}
+.p-b(@num) {
+    padding-bottom: @num * 1px;
+}
+.p-r(@num) {
+    padding-right: @num * 1px;
+}
+.p-l(@num) {
+    padding-left: @num * 1px;
+}
+.p-v(@num) {
+    padding: @num * 1px 0;
+}
+.p-h(@num) {
+    padding: 0 @num * 1px;
+}
+.flex() {
+    display: flex;
+}
+.flex-column() {
+    .flex();
+    flex-direction: column;
+}
+.flex-row() {
+    .flex();
+    flex-direction: row;
+}
+.flex-center() {
+    justify-content: center;
+    align-items: center;
+}
+.flex-column-center() {
+    .flex-column();
+    .flex-center();
+}
+.flex-row-center() {
+    .flex-row();
+    .flex-center();
+}
+.flex-end-center() {
+    justify-content: flex-end;
+    align-content: center;
+}
+.flex-start-center() {
+    justify-content: flex-start;
+    align-content: center;
+}
