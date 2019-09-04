@@ -110,6 +110,10 @@ gulp.task("minify", ["img"], function(cb) {
         }))
         .pipe(gulp.dest('./build'))
         .on("end", cb);
+});
+
+// 删除没有压缩的 html 文件
+gulp.task("del-html", ["minify"], function(cb) {
     // 删除没有压缩的 html 文件
     del(["./build/view"]);
 });
@@ -167,6 +171,6 @@ gulp.task('copy-package.json', function() {
 });
 
 // 生产
-gulp.task("default", ["minify"]);
+gulp.task("default", ["del-html"]);
 
 module.exports = gulp;
