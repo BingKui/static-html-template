@@ -9,6 +9,32 @@
 .t-c() {
     text-align: center;
 }
+.text-overflow () {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-overflow-line (@num) {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @num;
+    overflow: hidden;
+}
+
+.clearfix () {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
 .m(@num) {
     margin: @num * 1px;
 }
@@ -81,4 +107,102 @@
 .flex-start-center() {
     justify-content: flex-start;
     align-content: center;
+}
+
+// 修改滚动条
+.change-scroll-bar() {
+    &::-webkit-input-placeholder {
+        color: #000;
+        opacity: 0.25;
+        font-size: 14px;
+    }
+    
+    &::-moz-placeholder {
+        color: #000;
+        opacity: 0.25;
+        font-size: 14px;
+    }
+    
+    &:-moz-placeholder {
+        color: #000;
+        opacity: 0.25;
+        font-size: 14px;
+    }
+    
+    &:-ms-input-placeholder {
+        color: #000;
+        opacity: 0.25;
+        font-size: 14px;
+    }
+}
+// 滚动相关
+.scroll-x() {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll-y() {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
+
+// border 相关
+.border-line() {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @border-color;
+        position: absolute;
+        bottom: 0;
+        left: @gap-md;
+        right: @gap-md;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line(@color, @left, @right) {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @color;
+        position: absolute;
+        bottom: 0;
+        left: @left;
+        right: @right;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line-top() {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @border-color;
+        position: absolute;
+        top: 0;
+        left: @gap-md;
+        right: @gap-md;
+        transform: scaleY(.5);
+        content: '';
+    }
+}
+
+.border-line-top(@color, @left, @right) {
+    position: relative;
+    &::after {
+        height: 1px;
+        background-color: @color;
+        position: absolute;
+        top: 0;
+        left: @left;
+        right: @right;
+        transform: scaleY(.5);
+        content: '';
+    }
 }
